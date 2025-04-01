@@ -1,0 +1,29 @@
+{
+  "title": "Building a Game",
+  "questions": [
+    {
+      "id": "dimension",
+      "question": "Will your game be 2D or 3D?",
+      "type": "multi",
+      "options": ["2D", "3D"]
+    },
+    {
+      "id": "platform",
+      "question": "Which platform will it run on?",
+      "type": "multi",
+      "options": ["Web", "PC", "Console", "Mobile", "Roblox", "Minecraft"]
+    },
+    {
+      "id": "audio",
+      "question": "Will you need original audio or voiceover?",
+      "type": "multi",
+      "options": ["Music", "Sound FX", "Voice", "None"]
+    },
+    {
+      "id": "multiplayer",
+      "question": "Will the game be multiplayer?",
+      "type": "single",
+      "options": ["Yes", "No"]
+    }
+  ]
+}

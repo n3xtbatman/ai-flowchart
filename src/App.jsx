@@ -2,115 +2,80 @@ import { useEffect, useState } from "react";
 import ReactFlow, { Background, Controls } from "reactflow";
 import "reactflow/dist/style.css";
 
+import { renderFlowchartFromAnswers } from "./RenderFlowchartFromAnswers";
+import Questionnaire from "./components/Questionnaire";
+import HomePrompt from "./components/HomePrompt";
+
 const AIDB_URL =
-  "https://raw.githubusercontent.com/n3xtbatman/aidb.dev/main/data/AIDB.json?cache=" +
+  "https://raw.githubusercontent.com/n3xtbatman/ai-flowchart/main/data/AIDB.json?cache=" +
   Date.now();
 
 export default function App() {
+  const [tools, setTools] = useState({});
+  const [schema, setSchema] = useState(null);
   const [nodes, setNodes] = useState([]);
   const [edges, setEdges] = useState([]);
-  const [filter, setFilter] = useState("");
+  const [showPrompt, setShowPrompt] = useState(true);
 
   useEffect(() => {
-    const btn = document.getElementById("generateBtn");
-    btn.onclick = () => {
-      const input = document
-        .getElementById("promptInput")
-        .value.trim()
-        .toLowerCase();
-      setFilter(input);
-    };
+    fetch(AIDB_URL)
+      .then((res) => res.json())
+      .then(setTools);
   }, []);
 
-  useEffect(() => {
-    if (filter !== "") renderFlowchart();
-  }, [filter]);
-
-  async function renderFlowchart() {
-    const AIDB = await fetch(AIDB_URL).then((res) => res.json());
-    const newNodes = [];
-    const newEdges = [];
-    const stepList = [];
-
-    const grouped = {};
-    for (const [tool, data] of Object.entries(AIDB)) {
-      const key = `${data.Category}--${data.Subcategory}`;
-      if (!grouped[key]) grouped[key] = [];
-      grouped[key].push({ tool, ...data });
-    }
-
-    let xIndex = 0;
-    Object.entries(grouped).forEach(([groupKey, tools]) => {
-      const [category, subcategory] = groupKey.split("--");
-      const matchesFilter =
-        filter === "" ||
-        category.toLowerCase().includes(filter) ||
-        (subcategory && subcategory.toLowerCase().includes(filter)) ||
-        tools.some((t) => t.tool.toLowerCase().includes(filter));
-
-      if (!matchesFilter) return;
-
-      const stageId = `stage-${groupKey}`;
-      newNodes.push({
-        id: stageId,
-        type: "default",
-        position: { x: xIndex * 300, y: 50 },
-        data: { label: `${category.toUpperCase()} - ${subcategory}` },
-      });
-
-      tools.forEach((tool, j) => {
-        const id = `${groupKey}-${tool.tool}`;
-        newNodes.push({
-          id,
-          type: tool["Primary?"] ? "primary" : "alt",
-          position: { x: xIndex * 300, y: 130 + 80 * j },
-          data: {
-            label: `<a href='${tool.Website}' target='_blank'><strong>${tool.tool}</strong></a><br/><small>${tool["Function / Use"]}</small>`,
-          },
-        });
-        newEdges.push({ id: `e-${stageId}-${id}`, source: stageId, target: id });
-
-        if (tool["Function / Use"] && tool.Description) {
-          stepList.push(
-            `➡️ <strong>${tool.tool}</strong>: ${tool["Function / Use"]} — ${tool.Description}`
-          );
-        }
-      });
-
-      xIndex++;
+  const handleBucketSelect = (bucketId) => {
+    const schemaPath = `/src/schema/${bucketId}.json`;
+    import(/* @vite-ignore */ schemaPath).then((mod) => {
+      setSchema(mod.default);
+      setShowPrompt(false);
     });
+  };
 
-    setNodes(newNodes);
-    setEdges(newEdges);
+  const handleQuestionnaireComplete = (answers) => {
+    const { nodes, edges, stepList } = renderFlowchartFromAnswers(answers, tools);
+    setNodes(nodes);
+    setEdges(edges);
     document.getElementById("stepDescriptions").innerHTML = stepList
-      .map((s) => `<p class="step-description">${s}</p>`)
+      .map((s) => `<p class='step-description'>${s}</p>`) 
       .join("");
-  }
+  };
 
   return (
-    <div style={{ height: "80vh" }}>
-      <ReactFlow
-        nodes={nodes}
-        edges={edges}
-        fitView
-        nodeTypes={{
-          primary: ({ data }) => (
-            <div
-              className="react-flow__node-primary p-2 rounded text-sm text-center"
-              dangerouslySetInnerHTML={{ __html: data.label }}
-            />
-          ),
-          alt: ({ data }) => (
-            <div
-              className="react-flow__node-alt p-2 rounded text-sm text-center"
-              dangerouslySetInnerHTML={{ __html: data.label }}
-            />
-          ),
-        }}
-      >
-        <Background />
-        <Controls />
-      </ReactFlow>
+    <div style={{ height: "100vh" }}>
+      <div className="p-6 max-w-screen-xl mx-auto">
+        {showPrompt ? (
+          <HomePrompt onSelect={handleBucketSelect} />
+        ) : schema ? (
+          <Questionnaire schema={schema} onComplete={handleQuestionnaireComplete} />
+        ) : null}
+
+        <div id="stepDescriptions" className="my-4 text-sm text-gray-700 space-y-4"></div>
+
+        <div className="w-full h-[75vh] border rounded">
+          <ReactFlow
+            nodes={nodes}
+            edges={edges}
+            fitView
+            nodeTypes={{
+              primary: ({ data }) => (
+                <div
+                  className="react-flow__node-primary p-2 rounded text-sm text-center"
+                  dangerouslySetInnerHTML={{ __html: data.label }}
+                />
+              ),
+              alt: ({ data }) => (
+                <div
+                  className="react-flow__node-alt p-2 rounded text-sm text-center"
+                  dangerouslySetInnerHTML={{ __html: data.label }}
+                />
+              ),
+            }}
+          >
+            <Background />
+            <Controls />
+          </ReactFlow>
+        </div>
+      </div>
     </div>
   );
 }

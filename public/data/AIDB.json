@@ -1,182 +1,129 @@
 {
-  "DALL-E": {
-    "Category": "image generation",
-    "Subcategory": "2D",
-    "Primary?": true,
-    "Function / Use": "Text-to-image generation",
-    "Website": "https://openai.com/dall-e",
-    "Logo URL": "https://logo.url/dalle.png",
-    "Description": "Generate high-quality 2D visuals from text prompts."
-  },
-  "Midjourney": {
-    "Category": "image generation",
-    "Subcategory": "2D",
-    "Primary?": false,
-    "Function / Use": "Artistic visual generation",
-    "Website": "https://midjourney.com",
-    "Logo URL": "https://logo.url/mj.png",
-    "Description": "Generate creative and stylized artwork from text prompts."
-  },
-  "Runway": {
-    "Category": "video",
-    "Subcategory": "editing",
-    "Primary?": true,
-    "Function / Use": "AI video editing platform",
-    "Website": "https://runwayml.com",
-    "Logo URL": "https://logo.url/runway.png",
-    "Description": "Edit video content with AI effects, backgrounds, and more."
-  },
-  "ElevenLabs": {
-    "Category": "audio",
-    "Subcategory": "voice",
-    "Primary?": true,
-    "Function / Use": "Voice cloning and synthesis",
-    "Website": "https://elevenlabs.io",
-    "Logo URL": "https://logo.url/11labs.png",
-    "Description": "Generate natural-sounding AI voiceovers in many languages."
-  },
-  "Soundraw": {
-    "Category": "audio",
-    "Subcategory": "music",
-    "Primary?": true,
-    "Function / Use": "Music generation platform",
-    "Website": "https://soundraw.io",
-    "Logo URL": "https://logo.url/soundraw.png",
-    "Description": "Generate royalty-free original music with AI."
-  },
-  "Leonardo AI": {
-    "Category": "image generation",
-    "Subcategory": "game assets",
-    "Primary?": true,
-    "Function / Use": "2D and game asset generation",
-    "Website": "https://leonardo.ai",
-    "Logo URL": "https://logo.url/leonardo.png",
-    "Description": "Create game-ready concept art, sprites, and textures."
-  },
-  "Synthesia": {
-    "Category": "video",
-    "Subcategory": "avatar",
-    "Primary?": true,
-    "Function / Use": "AI video avatars",
-    "Website": "https://synthesia.io",
-    "Logo URL": "https://logo.url/synthesia.png",
-    "Description": "Create talking head videos with AI avatars from script."
-  },
-  "Pika": {
-    "Category": "video",
-    "Subcategory": "generation",
-    "Primary?": true,
-    "Function / Use": "Text-to-video generation",
-    "Website": "https://pika.art",
-    "Logo URL": "https://logo.url/pika.png",
-    "Description": "Generate short-form AI videos from a prompt."
-  },
-  "Descript": {
-    "Category": "audio",
-    "Subcategory": "editing",
-    "Primary?": true,
-    "Function / Use": "Audio + video editing with AI transcription",
-    "Website": "https://descript.com",
-    "Logo URL": "https://logo.url/descript.png",
-    "Description": "Transcribe, edit, and dub audio & video content."
-  },
-  "Luma AI": {
-    "Category": "3d modeling",
-    "Subcategory": "reconstruction",
-    "Primary?": true,
-    "Function / Use": "3D asset creation from real-world scans",
-    "Website": "https://lumalabs.ai",
-    "Logo URL": "https://logo.url/luma.png",
-    "Description": "Scan objects and environments and turn them into 3D models."
-  },
-  "AIVA": {
-    "Category": "audio",
-    "Subcategory": "music",
-    "Primary?": false,
-    "Function / Use": "AI music composition",
-    "Website": "https://aiva.ai",
-    "Logo URL": "https://logo.url/aiva.png",
-    "Description": "Compose orchestral and emotional music using AI."
-  },
-  "Boomy": {
-    "Category": "audio",
-    "Subcategory": "music",
-    "Primary?": false,
-    "Function / Use": "Quick AI music generation",
-    "Website": "https://boomy.com",
-    "Logo URL": "https://logo.url/boomy.png",
-    "Description": "Create music tracks instantly and distribute them."
-  },
-  "Papercup": {
-    "Category": "audio",
-    "Subcategory": "voice",
-    "Primary?": false,
-    "Function / Use": "AI voice dubbing",
-    "Website": "https://www.papercup.com",
-    "Logo URL": "https://logo.url/papercup.png",
-    "Description": "Dub content with AI voices across multiple languages."
-  },
-  "Cleanvoice": {
-    "Category": "audio",
-    "Subcategory": "editing",
-    "Primary?": false,
-    "Function / Use": "Podcast audio cleaning",
-    "Website": "https://cleanvoice.ai",
-    "Logo URL": "https://logo.url/cleanvoice.png",
-    "Description": "Remove filler words, stutters, and noise from audio."
-  },
-  "Pixcap": {
-    "Category": "3d modeling",
-    "Subcategory": "animation",
-    "Primary?": false,
-    "Function / Use": "Animate 3D characters",
-    "Website": "https://www.pixcap.com",
-    "Logo URL": "https://logo.url/pixcap.png",
-    "Description": "Generate rigged 3D characters and animations."
-  },
-  "Kaiber": {
-    "Category": "video",
-    "Subcategory": "music video",
-    "Primary?": false,
-    "Function / Use": "Create stylized music videos",
-    "Website": "https://kaiber.ai",
-    "Logo URL": "https://logo.url/kaiber.png",
-    "Description": "Turn music and visuals into motion art using AI."
-  },
-  "Clipchamp": {
-    "Category": "video",
-    "Subcategory": "editor",
-    "Primary?": false,
-    "Function / Use": "Simple web video editing",
-    "Website": "https://clipchamp.com",
-    "Logo URL": "https://logo.url/clipchamp.png",
-    "Description": "Trim, cut, and brand videos with AI suggestions."
-  },
-  "Gling": {
-    "Category": "video",
-    "Subcategory": "editing",
-    "Primary?": false,
-    "Function / Use": "AI video editor for creators",
-    "Website": "https://gling.ai",
-    "Logo URL": "https://logo.url/gling.png",
-    "Description": "Edit creator videos using AI cuts and reformatting."
-  },
-  "Voicemod": {
-    "Category": "audio",
-    "Subcategory": "voice",
-    "Primary?": false,
-    "Function / Use": "Real-time voice modulation",
-    "Website": "https://www.voicemod.net",
-    "Logo URL": "https://logo.url/voicemod.png",
-    "Description": "Change your voice in real-time for games and content."
-  },
-  "Altered Studio": {
-    "Category": "audio",
-    "Subcategory": "voice",
-    "Primary?": false,
-    "Function / Use": "AI voice transformation",
-    "Website": "https://www.altered.ai",
-    "Logo URL": "https://logo.url/altered.png",
-    "Description": "Change voices, accents, or genders with AI."
+    "DALL-E": {
+      "Category": "image generation",
+      "Subcategory": "2D",
+      "Primary?": true,
+      "Function / Use": "Text-to-image generation",
+      "Website": "https://openai.com/dall-e",
+      "Logo URL": "https://logo.url/dalle.png",
+      "Description": "Generate high-quality 2D visuals from text prompts."
+    },
+    "Midjourney": {
+      "Category": "image generation",
+      "Subcategory": "2D",
+      "Primary?": false,
+      "Function / Use": "Artistic visual generation",
+      "Website": "https://midjourney.com",
+      "Logo URL": "https://logo.url/mj.png",
+      "Description": "Generate creative and stylized artwork from text prompts."
+    },
+    "Runway": {
+      "Category": "video",
+      "Subcategory": "editing",
+      "Primary?": true,
+      "Function / Use": "AI video editing platform",
+      "Website": "https://runwayml.com",
+      "Logo URL": "https://logo.url/runway.png",
+      "Description": "Edit video content with AI effects, backgrounds, and more."
+    },
+    "ElevenLabs": {
+      "Category": "audio",
+      "Subcategory": "voice",
+      "Primary?": true,
+      "Function / Use": "Voice cloning and synthesis",
+      "Website": "https://elevenlabs.io",
+      "Logo URL": "https://logo.url/11labs.png",
+      "Description": "Generate natural-sounding AI voiceovers in many languages."
+    },
+    "Soundraw": {
+      "Category": "audio",
+      "Subcategory": "music",
+      "Primary?": true,
+      "Function / Use": "Music generation platform",
+      "Website": "https://soundraw.io",
+      "Logo URL": "https://logo.url/soundraw.png",
+      "Description": "Generate royalty-free original music with AI."
+    },
+    "Leonardo AI": {
+      "Category": "image generation",
+      "Subcategory": "game assets",
+      "Primary?": true,
+      "Function / Use": "2D and game asset generation",
+      "Website": "https://leonardo.ai",
+      "Logo URL": "https://logo.url/leonardo.png",
+      "Description": "Create game-ready concept art, sprites, and textures."
+    },
+    "Synthesia": {
+      "Category": "video",
+      "Subcategory": "avatar",
+      "Primary?": true,
+      "Function / Use": "AI video avatars",
+      "Website": "https://synthesia.io",
+      "Logo URL": "https://logo.url/synthesia.png",
+      "Description": "Create talking head videos with AI avatars from script."
+    },
+    "Pika": {
+      "Category": "video",
+      "Subcategory": "generation",
+      "Primary?": true,
+      "Function / Use": "Text-to-video generation",
+      "Website": "https://pika.art",
+      "Logo URL": "https://logo.url/pika.png",
+      "Description": "Generate short-form AI videos from a prompt."
+    },
+    "BioGPT": {
+      "Category": "nlp",
+      "Subcategory": "biomedical",
+      "Primary?": true,
+      "Function / Use": "Biomedical text generation and Q&A",
+      "Website": "https://huggingface.co/microsoft/BioGPT",
+      "Logo URL": "https://logo.url/biogpt.png",
+      "Description": "Generate or analyze biomedical content using pretrained language models."
+    },
+    "Semantic Scholar": {
+      "Category": "research",
+      "Subcategory": "literature",
+      "Primary?": true,
+      "Function / Use": "Find academic papers and citations",
+      "Website": "https://semanticscholar.org",
+      "Logo URL": "https://logo.url/semanticscholar.png",
+      "Description": "AI-powered academic search engine for scholarly research."
+    },
+    "SciSummary": {
+      "Category": "summarization",
+      "Subcategory": "scientific",
+      "Primary?": true,
+      "Function / Use": "Summarize scientific papers",
+      "Website": "https://scisummary.com",
+      "Logo URL": "https://logo.url/scisummary.png",
+      "Description": "Summarize long scientific texts into concise explanations."
+    },
+    "Elicit": {
+      "Category": "research",
+      "Subcategory": "review",
+      "Primary?": true,
+      "Function / Use": "Literature review assistant",
+      "Website": "https://elicit.org",
+      "Logo URL": "https://logo.url/elicit.png",
+      "Description": "Find relevant papers, extract data, and assist with reviews."
+    },
+    "Paperpal": {
+      "Category": "writing",
+      "Subcategory": "academic",
+      "Primary?": true,
+      "Function / Use": "Academic writing assistant",
+      "Website": "https://paperpal.com",
+      "Logo URL": "https://logo.url/paperpal.png",
+      "Description": "Improve clarity, grammar, and structure in scientific writing."
+    },
+    "Scite": {
+      "Category": "research",
+      "Subcategory": "verification",
+      "Primary?": false,
+      "Function / Use": "Smart citation search",
+      "Website": "https://scite.ai",
+      "Logo URL": "https://logo.url/scite.png",
+      "Description": "Analyze how scientific articles have been cited (support, contrast, etc)."
+    }
   }
-}
+  

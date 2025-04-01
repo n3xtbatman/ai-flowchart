@@ -1,0 +1,35 @@
+{
+  "title": "AI for Research & Science",
+  "questions": [
+    {
+      "id": "domain",
+      "question": "What domain are you working in?",
+      "type": "multi",
+      "options": ["Biology", "Chemistry", "Physics", "Engineering", "Mathematics", "Social Sciences"]
+    },
+    {
+      "id": "task",
+      "question": "What kind of task are you doing?",
+      "type": "multi",
+      "options": ["Literature Review", "Data Analysis", "Modeling/Simulation", "Paper Writing", "Presentation", "Experiment Design"]
+    },
+    {
+      "id": "inputType",
+      "question": "What kind of input data do you have?",
+      "type": "multi",
+      "options": ["Raw Text", "Spreadsheets", "Scientific Papers", "Graphs", "Structured Data"]
+    },
+    {
+      "id": "outputNeeded",
+      "question": "What kind of output are you aiming for?",
+      "type": "multi",
+      "options": ["Summary", "Graph", "Interactive Model", "Presentation", "Slide Deck", "Code"]
+    },
+    {
+      "id": "collaboration",
+      "question": "Is this individual or collaborative research?",
+      "type": "single",
+      "options": ["Individual", "Team", "Publishing"]
+    }
+  ]
+}

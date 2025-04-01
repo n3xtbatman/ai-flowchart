@@ -1,0 +1,35 @@
+{
+  "title": "Creating Audio Assets",
+  "questions": [
+    {
+      "id": "audioType",
+      "question": "What kind of audio are you creating?",
+      "type": "multi",
+      "options": ["Music", "Sound FX", "Voiceover", "Podcast", "Narration", "Ambient"]
+    },
+    {
+      "id": "audioStyle",
+      "question": "What is the style or tone?",
+      "type": "multi",
+      "options": ["Cinematic", "Corporate", "Casual", "Excited", "Serious", "Playful"]
+    },
+    {
+      "id": "audioPurpose",
+      "question": "How will this audio be used?",
+      "type": "multi",
+      "options": ["Background", "Dialogue", "Interactive", "Intro/Outro", "Narration"]
+    },
+    {
+      "id": "language",
+      "question": "Which language or accent do you need?",
+      "type": "multi",
+      "options": ["English", "Spanish", "French", "German", "Japanese", "Custom"]
+    },
+    {
+      "id": "delivery",
+      "question": "What should be delivered?",
+      "type": "multi",
+      "options": ["Raw Audio", "Mixed Track", "Transcript", "Timed Captions"]
+    }
+  ]
+}
