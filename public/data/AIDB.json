@@ -71,6 +71,114 @@
       "Logo URL": "https://logo.url/pika.png",
       "Description": "Generate short-form AI videos from a prompt."
     },
+    "Descript": {
+      "Category": "audio",
+      "Subcategory": "editing",
+      "Primary?": true,
+      "Function / Use": "Audio + video editing with AI transcription",
+      "Website": "https://descript.com",
+      "Logo URL": "https://logo.url/descript.png",
+      "Description": "Transcribe, edit, and dub audio & video content."
+    },
+    "Luma AI": {
+      "Category": "3d modeling",
+      "Subcategory": "reconstruction",
+      "Primary?": true,
+      "Function / Use": "3D asset creation from real-world scans",
+      "Website": "https://lumalabs.ai",
+      "Logo URL": "https://logo.url/luma.png",
+      "Description": "Scan objects and environments and turn them into 3D models."
+    },
+    "AIVA": {
+      "Category": "audio",
+      "Subcategory": "music",
+      "Primary?": false,
+      "Function / Use": "AI music composition",
+      "Website": "https://aiva.ai",
+      "Logo URL": "https://logo.url/aiva.png",
+      "Description": "Compose orchestral and emotional music using AI."
+    },
+    "Boomy": {
+      "Category": "audio",
+      "Subcategory": "music",
+      "Primary?": false,
+      "Function / Use": "Quick AI music generation",
+      "Website": "https://boomy.com",
+      "Logo URL": "https://logo.url/boomy.png",
+      "Description": "Create music tracks instantly and distribute them."
+    },
+    "Papercup": {
+      "Category": "audio",
+      "Subcategory": "voice",
+      "Primary?": false,
+      "Function / Use": "AI voice dubbing",
+      "Website": "https://www.papercup.com",
+      "Logo URL": "https://logo.url/papercup.png",
+      "Description": "Dub content with AI voices across multiple languages."
+    },
+    "Cleanvoice": {
+      "Category": "audio",
+      "Subcategory": "editing",
+      "Primary?": false,
+      "Function / Use": "Podcast audio cleaning",
+      "Website": "https://cleanvoice.ai",
+      "Logo URL": "https://logo.url/cleanvoice.png",
+      "Description": "Remove filler words, stutters, and noise from audio."
+    },
+    "Pixcap": {
+      "Category": "3d modeling",
+      "Subcategory": "animation",
+      "Primary?": false,
+      "Function / Use": "Animate 3D characters",
+      "Website": "https://www.pixcap.com",
+      "Logo URL": "https://logo.url/pixcap.png",
+      "Description": "Generate rigged 3D characters and animations."
+    },
+    "Kaiber": {
+      "Category": "video",
+      "Subcategory": "music video",
+      "Primary?": false,
+      "Function / Use": "Create stylized music videos",
+      "Website": "https://kaiber.ai",
+      "Logo URL": "https://logo.url/kaiber.png",
+      "Description": "Turn music and visuals into motion art using AI."
+    },
+    "Clipchamp": {
+      "Category": "video",
+      "Subcategory": "editor",
+      "Primary?": false,
+      "Function / Use": "Simple web video editing",
+      "Website": "https://clipchamp.com",
+      "Logo URL": "https://logo.url/clipchamp.png",
+      "Description": "Trim, cut, and brand videos with AI suggestions."
+    },
+    "Gling": {
+      "Category": "video",
+      "Subcategory": "editing",
+      "Primary?": false,
+      "Function / Use": "AI video editor for creators",
+      "Website": "https://gling.ai",
+      "Logo URL": "https://logo.url/gling.png",
+      "Description": "Edit creator videos using AI cuts and reformatting."
+    },
+    "Voicemod": {
+      "Category": "audio",
+      "Subcategory": "voice",
+      "Primary?": false,
+      "Function / Use": "Real-time voice modulation",
+      "Website": "https://www.voicemod.net",
+      "Logo URL": "https://logo.url/voicemod.png",
+      "Description": "Change your voice in real-time for games and content."
+    },
+    "Altered Studio": {
+      "Category": "audio",
+      "Subcategory": "voice",
+      "Primary?": false,
+      "Function / Use": "AI voice transformation",
+      "Website": "https://www.altered.ai",
+      "Logo URL": "https://logo.url/altered.png",
+      "Description": "Change voices, accents, or genders with AI."
+    },
     "BioGPT": {
       "Category": "nlp",
       "Subcategory": "biomedical",
