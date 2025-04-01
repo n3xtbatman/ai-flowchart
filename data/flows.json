@@ -1,0 +1,105 @@
+{
+    "music video": {
+      "title": "Music Video",
+      "steps": [
+        { "tool": "Midjourney", "function": "Create 2D images" },
+        { "tool": "Luma AI", "function": "Feed images into Dream Machine" },
+        { "tool": "EditAI", "function": "Edit and finalize video" }
+      ]
+    },
+    "original song": {
+      "title": "Song Creation",
+      "steps": [
+        { "tool": "ChatGPT", "function": "Generate lyrics" },
+        { "tool": "Soundraw", "function": "Generate melody" }
+      ]
+    },
+    "brand identity": {
+      "title": "Design Brand Kit",
+      "steps": [
+        { "tool": "ChatGPT", "function": "Generate brand values and tagline" },
+        { "tool": "Midjourney", "function": "Create logo and color palette" }
+      ]
+    },
+    "poster design": {
+      "title": "Poster Design",
+      "steps": [
+        { "tool": "ChatGPT", "function": "Generate copy" },
+        { "tool": "CanvaAI", "function": "Design marketing poster" }
+      ]
+    },
+    "multiplayer game": {
+      "title": "Multiplayer Game",
+      "steps": [
+        { "tool": "ChatGPT", "function": "Generate game concept" },
+        { "tool": "Unity AI", "function": "Build 3D game" },
+        { "tool": "Photon Engine", "function": "Add multiplayer functionality" }
+      ]
+    },
+    "chatbot assistant": {
+      "title": "Chatbot Flow",
+      "steps": [
+        { "tool": "Botpress", "function": "Design chatbot logic" },
+        { "tool": "ChatGPT", "function": "Power natural conversation" }
+      ]
+    },
+    "launch app": {
+      "title": "Build Web App",
+      "steps": [
+        { "tool": "ChatGPT", "function": "Generate HTML/CSS template" },
+        { "tool": "Replit", "function": "Host and deploy the app" }
+      ]
+    },
+    "web scraper": {
+      "title": "Scrape and Store Data",
+      "steps": [
+        { "tool": "ScraperAPI", "function": "Scrape target website" },
+        { "tool": "ChatGPT", "function": "Format output" },
+        { "tool": "Airtable", "function": "Save data" }
+      ]
+    },
+    "newsletter workflow": {
+      "title": "Automate Newsletter",
+      "steps": [
+        { "tool": "Zapier", "function": "Trigger on form submit" },
+        { "tool": "ChatGPT", "function": "Summarize content" },
+        { "tool": "Beehiiv", "function": "Send newsletter" }
+      ]
+    },
+    "spreadsheet cleanup": {
+      "title": "Data Cleanup",
+      "steps": [
+        { "tool": "ChatGPT", "function": "Suggest column cleanups" },
+        { "tool": "ExcelFormulaBot", "function": "Apply fixes" }
+      ]
+    },
+    "daily planner": {
+      "title": "Smart Daily Planner",
+      "steps": [
+        { "tool": "ChatGPT", "function": "Generate to-do list" },
+        { "tool": "Notion AI", "function": "Create calendar" }
+      ]
+    },
+    "meeting summary": {
+      "title": "Meeting Minutes",
+      "steps": [
+        { "tool": "Whisper", "function": "Transcribe meeting" },
+        { "tool": "ChatGPT", "function": "Summarize and generate action items" }
+      ]
+    },
+    "literature review": {
+      "title": "Literature Review",
+      "steps": [
+        { "tool": "Elicit", "function": "Find and summarize papers" },
+        { "tool": "ChatGPT", "function": "Organize by theme" }
+      ]
+    },
+    "study assistant": {
+      "title": "Research Study Builder",
+      "steps": [
+        { "tool": "ChatGPT", "function": "Draft study plan" },
+        { "tool": "Google Scholar", "function": "Collect background literature" }
+      ]
+    }
+  }
+  

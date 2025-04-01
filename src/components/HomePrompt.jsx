@@ -1,63 +1,110 @@
-// src/components/HomePrompt.jsx
-
 import React from "react";
 
-const bucketOptions = [
+const categories = [
   {
     id: "creative",
-    title: "Creative Media",
+    name: "Creative",
     emoji: "🎨",
-    subtitle: "Image, Video, Music, Design",
+    examples: "Image, Video, Music, Design"
   },
   {
     id: "interactive",
-    title: "Interactive Apps",
-    emoji: "🕹",
-    subtitle: "Games, Chatbots, Simulations",
+    name: "Interactive",
+    emoji: "🎮",
+    examples: "Games, Chatbots, Simulations"
   },
   {
-    id: "workflow",
-    title: "Workflows & Agents",
+    id: "development",
+    name: "Development",
+    emoji: "💻",
+    examples: "Apps, Platforms, APIs"
+  },
+  {
+    id: "workflows",
+    name: "Workflows",
     emoji: "⚙️",
-    subtitle: "Automation, Toolchains, APIs",
+    examples: "Agents, Automation, Toolchains"
   },
   {
     id: "productivity",
-    title: "Productivity",
-    emoji: "✍️",
-    subtitle: "Writing, Meetings, Research",
-  },
-  {
-    id: "dev",
-    title: "Dev & Code",
-    emoji: "💻",
-    subtitle: "Programming Tools & Platforms",
+    name: "Productivity",
+    emoji: "🖋️",
+    examples: "Writing, Meetings, Research"
   },
   {
     id: "research",
-    title: "Research & Science",
+    name: "Research",
     emoji: "🔬",
-    subtitle: "Biotech, Chemistry, Academic AI",
+    examples: "Science, Literature, Review"
   }
 ];
 
-export default function HomePrompt({ onSelect }) {
+export default function HomePrompt({
+  input,
+  setInput,
+  onGenerate,
+  onReload,
+  activeBuckets = []
+}) {
+  const handleKeyPress = (e) => {
+    if (e.key === "Enter") {
+      onGenerate();
+    }
+  };
+
   return (
-    <div className="max-w-screen-md mx-auto text-center">
-      <h1 className="text-3xl font-bold mb-6">What are you trying to build?</h1>
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-        {bucketOptions.map((bucket) => (
-          <button
-            key={bucket.id}
-            onClick={() => onSelect(bucket.id)}
-            className="bg-white hover:bg-blue-50 border border-gray-300 rounded-lg p-6 shadow-md text-left flex flex-col items-start transition"
-          >
-            <div className="text-4xl mb-2">{bucket.emoji}</div>
-            <div className="text-lg font-semibold">{bucket.title}</div>
-            <div className="text-sm text-gray-600">{bucket.subtitle}</div>
-          </button>
-        ))}
+    <>
+      <h2 className="text-2xl font-bold text-center mb-4">
+        What are you building?
+      </h2>
+
+      <div className="grid grid-cols-2 sm:grid-cols-3 gap-4 mb-6">
+        {categories.map((cat) => {
+          const active = activeBuckets.includes(cat.id);
+          return (
+            <div
+              key={cat.id}
+              onClick={() => setInput(cat.name.toLowerCase())}
+              className={`cursor-pointer p-2 sm:p-4 rounded-lg shadow text-center border-2 transition text-sm sm:text-base ${
+                active
+                  ? "bg-green-100 border-green-500"
+                  : "bg-white border-gray-300"
+              }`}
+            >
+              <div className="text-2xl sm:text-3xl mb-1">{cat.emoji}</div>
+              <div className="font-semibold text-md sm:text-lg">
+                {cat.name}
+              </div>
+              <div className="text-xs sm:text-sm text-gray-600">
+                {cat.examples}
+              </div>
+            </div>
+          );
+        })}
       </div>
-    </div>
+
+      <div className="flex justify-center mb-4 flex-wrap gap-2">
+        <input
+          type="text"
+          className="border border-gray-300 px-4 py-2 rounded w-full max-w-md"
+          value={input}
+          onChange={(e) => setInput(e.target.value)}
+          onKeyDown={handleKeyPress}
+          placeholder="e.g. I want to build a 3D multiplayer game"
+        />
+        <button
+          className="bg-green-600 text-white px-6 py-2 rounded hover:bg-green-700"
+          onClick={onGenerate}
+        >
+          Generate
+        </button>
+        <button
+          className="bg-gray-200 px-4 py-2 rounded hover:bg-gray-300"
+          onClick={onReload}
+        >
+          Reload Site
+        </button>
+      </div>
+    </>
   );
 }
